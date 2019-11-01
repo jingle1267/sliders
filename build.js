@@ -81,12 +81,14 @@ var eventify = function (arr, callback) {
 };
 
 fs.readdir('./src', function (err, files) {
+    // console.log(files)
     if (err) {
         return console.log(err);
     }
     eventify(home_items, function (updatedArr) {
-        console.log(updatedArr.length + "===" + (files.length - 1) + "===" + home_items.length)
-        if (updatedArr.length === (files.length - 1)) {
+        // console.log(updatedArr.length + "===" + files.length + "===" + home_items.length)
+        // mac下面会自动生成隐藏的.DS_Store文件
+        if (updatedArr.length === files.length) {
 
             // 对输出的列表进行排序
             home_items = home_items.sort(function (a, b) {
@@ -108,9 +110,9 @@ fs.readdir('./src', function (err, files) {
                 home_items[i].style = style_arr[i % style_arr.length]
             }
 
-            for (var i = 0; i < home_items.length; i++) {
-                console.log(home_items[i].name + " - " + home_items[i].style)
-            }
+            // for (var i = 0; i < home_items.length; i++) {
+            //     console.log(home_items[i].name + " - " + home_items[i].style)
+            // }
 
             fs.readFile("./templates/index.tpl", "utf8", function (err, data) {
                 if (err) {
