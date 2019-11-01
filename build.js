@@ -85,6 +85,7 @@ fs.readdir('./src', function (err, files) {
         return console.log(err);
     }
     eventify(home_items, function (updatedArr) {
+        console.log(updatedArr.length + "===" + (files.length - 1) + "===" + home_items.length)
         if (updatedArr.length === (files.length - 1)) {
 
             // 对输出的列表进行排序
@@ -101,6 +102,7 @@ fs.readdir('./src', function (err, files) {
 
             // 设置文章列表列表的样式
             var style_arr = ['aa', 'bb', 'cc'];
+            console.log("home_items.length:" + home_items.length);
             for (var i = 0; i < home_items.length; i++) {
                 // console.log(home_items[i].name)
                 home_items[i].style = style_arr[i % style_arr.length]
