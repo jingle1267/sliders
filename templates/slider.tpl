@@ -6,7 +6,7 @@
 
 		<title>{{title}}</title>
 
-		<meta name="description" content="{{title}}">
+		<meta name="description" content="{{title}}-爱红旗渠">
 		<meta name="author" content="jingle1267">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
