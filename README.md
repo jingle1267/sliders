@@ -28,7 +28,7 @@
 
     npm run start
 
-然后访问 <http://localhost:8000/>
+然后访问 [http://localhost:8000/](http://localhost:8000/)
 
 ### 清理构建
 
