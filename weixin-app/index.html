@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>微信小程序介绍</title>
+
+		<meta name="description" content="微信小程序介绍">
+		<meta name="author" content="jingle1267">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../templates/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../templates/revealjs/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../templates/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../templates/revealjs/css/print/pdf.css' : '../templates/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides"><section ><section data-markdown><script type="text/template"># 微信小程序介绍
+</script></section><section data-markdown><script type="text/template">
+### 关于
+
+靳振国<br/>
+[jinzhenguo@jd.com](mailto:jinzhenguo@jd.com)<br/>
+http://ihongqiqu.com<br/>
+</script></section></section><section  data-markdown><script type="text/template">
+## 微信小程序
+
+微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。
+</script></section><section ><section data-markdown><script type="text/template">
+## 环境配置
+</script></section><section data-markdown><script type="text/template">
+### 申请账号
+
+  访问 https://mp.weixin.qq.com/wxopen/waregister?action=step1 根据提示完成注册账号。
+  <br />
+  注册完成后，登陆 https://mp.weixin.qq.com ，在设置-开发设置中可以找到小程序 AppID。
+</script></section><section data-markdown><script type="text/template">
+### 安装开发工具
+
+  微信小程序开发工具下载地址：https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html?t=201818
+  <br />
+  开发工具详细介绍见：https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/devtools.html?t=201818
+</script></section><section data-markdown><script type="text/template">
+### Hello World
+
+  打开微信开发者工具，登录后点击右下角"+"按钮，进入如下界面：
+
+  ![Project Info](http://ihongqiqu.com/imgs/post/wx_app_init.png)
+
+  选择项目目录，填写刚刚申请的 AppID 和x项目名称。并选中"建立普通快速启动模板"。
+  <br />
+  点击创建，Hello World就创建出来了。
+</script></section></section><section ><section data-markdown><script type="text/template">
+## 项目结构介绍
+
+  项目目录结构如图：
+
+  ![Project Info](http://ihongqiqu.com/imgs/post/wx_app_pj_info.png)
+</script></section><section data-markdown><script type="text/template">
+### APP.JSON
+
+  app.json 是对当前小程序的全局配置，包括了小程序的所有页面路径、界面表现、网络超时时间、底部 tab 等。
+
+  例子：
+```XML
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
+```
+
+pages 和 window 介绍：
+
+1. pages字段：用于描述当前小程序所有页面路径，这是为了让微信客户端知道当前你的小程序页面定义在哪个目录。
+2. window字段：小程序所有页面的顶部背景颜色，文字颜色定义在这里的。
+</script></section><section data-markdown><script type="text/template">
+### WXML
+
+  类似网页编程的HTML，代码如下：
+
+```HTML
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+```
+
+  从上面代码可以看出，代码风格很像HTML，同时也有自己的语法如wx:if和wx:else。更多语法请参考 https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/ 。
+</script></section><section data-markdown><script type="text/template">
+### WXSS
+
+  WXSS 具有 CSS 大部分的特性，小程序在 WXSS 也做了一些扩充和修改。示例代码如下：
+
+```CSS
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+```
+
+  更多详细请参考 https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxss.html
+</script></section><section data-markdown><script type="text/template">
+### JavaScript
+
+  和用户交互需要使用 JavaScript 来实现。我们常见的网络请求，事件处理等都有 JavaScript 来处理。关于 JavaScript 这里不做介绍了。
+</script></section></section><section ><section data-markdown><script type="text/template">
+## 上线
+</script></section><section data-markdown><script type="text/template">
+### 预览
+
+  如果开发中需要预览和测试，微信需要添加相应的权限。添加预览入口：小程序管理后台 - 用户身份 – 成员管理。
+  <br />
+  添加不会推送告知被添加者。添加成功之后，使用被添加者的微信，扫描微信开发工具生成的预览二维码就可以看到开发的微信小程序了。
+</script></section><section data-markdown><script type="text/template">
+### 提交审核
+
+  开发完成，通过点击微信开发者工具右上角的上传，可以上传到小程序管理后台。在开发管理中可以找到提交的版本。这个时候的版本还是预览版本，通过扫描二维码，可以让添加权限的微信用户体验。
+  <br />
+  如果测试确认没问题可以上线，点击管理后台-开发管理中的提交审核。提交审核，第一个版本审核时间可能会有几天，之后审核时间会缩短大概一天左右。
+</script></section><section data-markdown><script type="text/template">
+### 发布
+
+  审核通过之后，管理员会收到微信推送。这个时候，我们的小程序还没有上线，我们可以再后天点击发布按钮来控制什么时间发布。
+</script></section></section><section  data-markdown><script type="text/template">
+## Samples
+
+| 官方例子                                     | 我的例子                                     |
+| ---------------------------------------- | ---------------------------------------- |
+| ![Weixin Demo](http://ihongqiqu.com/imgs/post/weixin_app_demo.jpg) | ![Weixin Demo](http://ihongqiqu.com/imgs/post/wx_app_jingle1267.jpg) |
+| 源码地址：https://github.com/jingle1267/demo  | 源码地址：https://github.com/jingle1267/HelloCodeDev |
+
+  
+
+
+
+</script></section></div>
+		</div>
+
+		<script src="../templates/revealjs/lib/js/head.min.js"></script>
+		<script src="../templates/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'default', // default/none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../templates/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../templates/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../templates/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../templates/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>		
+	</body>
+</html>

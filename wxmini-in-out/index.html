@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>微信小程序从入门到放弃</title>
+
+		<meta name="description" content="微信小程序从入门到放弃">
+		<meta name="author" content="jingle1267">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../templates/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../templates/revealjs/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../templates/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../templates/revealjs/css/print/pdf.css' : '../templates/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides"><section ><section data-markdown><script type="text/template"># 微信小程序从入门到放弃
+</script></section><section data-markdown><script type="text/template">
+### 分享内容
+
+1. 小程序组件
+2. 小程序接口
+3. 小程序 vs H5
+4. 小程序新特性
+5. 放弃
+</script></section><section data-markdown><script type="text/template">
+### 1. 小程序组件
+</script></section><section data-markdown><script type="text/template">
+#### 1.1 小程序组件脑图
+
+[![小程序组件](/sliders/assets/images/weixin/wxmini_component.jpg)](https://www.processon.com/view/link/5b7bb6d0e4b08d3622b73fac)
+</script></section><section data-markdown><script type="text/template">
+#### 1.2 小程序组件二维码
+
+![小程序组件二维码](/sliders/assets/images/weixin/xcxzj.png)
+</script></section><section data-markdown><script type="text/template">
+### 2. 小程序接口
+</script></section><section data-markdown><script type="text/template">
+#### 2.1 小程序接口脑图
+
+[![小程序接口](/sliders/assets/images/weixin/wxmini_api.jpg)](https://www.processon.com/view/link/5d4a6dcee4b0e471993abc51)
+</script></section><section data-markdown><script type="text/template">
+#### 2.2 小程序接口二维码
+
+![小程序接口二维码](/sliders/assets/images/weixin/xcxjk.png)
+</script></section><section data-markdown><script type="text/template">
+#### 2.3 登录态打通
+
+![小程序接口二维码](/sliders/assets/images/weixin/wx_mini2h5.jpeg)
+</script></section><section data-markdown><script type="text/template">
+### 3. 小程序 vs H5
+</script></section><section data-markdown><script type="text/template">
+#### 3.1 标签对比
+
+![小程序vsH5](/sliders/assets/images/weixin/wx_h5_sign.png)
+</script></section><section data-markdown><script type="text/template">
+#### 3.2 选图上传
+
+![小程序vsH5](/sliders/assets/images/weixin/wx_h5_upload.png)
+</script></section><section data-markdown><script type="text/template">
+#### 3.3 开发框架对比
+
+![小程序vsH5](/sliders/assets/images/weixin/wx_compare.png)
+</script></section><section data-markdown><script type="text/template">
+### 4. 小程序新特性
+
+1. 支持自定义标题栏
+2. 分包加载
+3. 云开发
+</script></section><section data-markdown><script type="text/template">
+### 5. 放弃
+</script></section><section data-markdown><script type="text/template">
+#### 5.1 遇到过的问题
+
+![wx_question](/sliders/assets/images/weixin/wx_question.png)
+</script></section><section data-markdown><script type="text/template">
+#### 5.2 微信的限制
+
+1. 服务器域名和业务域名限制
+2. 页面层级最大10
+3. 服务通知 formId payId
+4. 只可微信支付
+5. 打开APP
+6. ...
+</script></section><section data-markdown><script type="text/template">
+#### 5.3 大坑预警web-view
+</script></section><section data-markdown><script type="text/template">
+##### 5.3.1 优点
+
+不需重复开发，H5拿来就能用
+</script></section><section data-markdown><script type="text/template">
+##### 5.3.2
+
+1. 用户体验没有原生好
+2. 限制较多，业务域名校验和数量限制
+3. 原生和小程序交互能力薄弱
+4. web-view层级高会覆盖其他组件
+</script></section><section data-markdown><script type="text/template">
+#### 5.4 限制加强项目
+
+1. 限制分享
+2. getUserInfo
+3. 打开设置
+</script></section><section data-markdown><script type="text/template">
+### 手机上看
+
+![小程序组件二维码](/sliders/assets/images/weixin/qr_ppt.png)
+</script></section><section data-markdown><script type="text/template">
+### iOS手机专享-慎扫
+
+![小程序组件二维码](/sliders/assets/images/weixin/ios_shutdown.png)
+</script></section><section data-markdown><script type="text/template">
+### QA
+
+</script></section></section></div>
+		</div>
+
+		<script src="../templates/revealjs/lib/js/head.min.js"></script>
+		<script src="../templates/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'default', // default/none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../templates/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../templates/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../templates/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../templates/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>		
+	</body>
+</html>

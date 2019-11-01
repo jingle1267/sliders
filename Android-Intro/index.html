@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>About Android</title>
+
+		<meta name="description" content="About Android">
+		<meta name="author" content="jingle1267">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../templates/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../templates/revealjs/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../templates/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../templates/revealjs/css/print/pdf.css' : '../templates/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides"><section ><section data-markdown><script type="text/template"># About Android
+</script></section><section data-markdown><script type="text/template">
+### 移动创新研发
+
+靳振国<br/>
+[jinzhenguo@jd.com](mailto:jinzhenguo@jd.com)<br/>
+http://ihongqiqu.com<br/>
+</script></section><section data-markdown><script type="text/template">
+### 介绍
+
+- Android 现状
+- Android 开发
+- Android 四大组件
+- Android 测试
+- Android 安全隐患
+- 趋势
+- Thanks
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Android 现状
+</script></section><section data-markdown><script type="text/template">
+#### 职能手机市场占有率
+
+![](../assets/images/Android-Intro/OSpercent.jpg)
+</script></section><section data-markdown><script type="text/template">
+#### Android 系统版本分布
+
+![](../assets/images/Android-Intro/AndroidOSVersion.png)
+</script></section><section data-markdown><script type="text/template">
+#### Android 屏幕分辨率
+
+![](../assets/images/Android-Intro/AndroidScreenSize.jpg)
+</script></section><section data-markdown><script type="text/template">
+#### 原生和H5对比
+
+![](../assets/images/Android-Intro/NativeVSH5.png)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Android 开发
+</script></section><section data-markdown><script type="text/template">
+###### 系统架构图
+
+![](../assets/images/Android-Intro/AndroidArchitecture.jpg)
+</script></section><section data-markdown><script type="text/template">
+#### Android 开发流程
+
+![](../assets/images/Android-Intro/developer-workflow-old.jpg) ![](../assets/images/Android-Intro/developer-workflow.jpg)
+</script></section><section data-markdown><script type="text/template">
+#### 开发介绍
+
+ 主要开发语言 Java 和 c/c++ 
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Android 四大组件
+</script></section><section data-markdown><script type="text/template">
+#### Activity
+
+![](../assets/images/Android-Intro/activity_lifecycle.jpg) ![](../assets/images/Android-Intro/fragment_lifecycle.jpg)
+</script></section><section data-markdown><script type="text/template">
+#### Service
+
+![](../assets/images/Android-Intro/service_lifecycle.png)
+</script></section><section data-markdown><script type="text/template">
+#### Broadcast Receiver
+
+通信 解耦
+
+> 组件 | ANR 时间
+> ---|---
+> Broadcast | 10s
+> Activity | 5s
+</script></section><section data-markdown><script type="text/template">
+#### Content Provider
+
+跨进程(跨应用)数据访问
+</script></section></section><section ><section data-markdown><script type="text/template">
+## 测试
+</script></section><section data-markdown><script type="text/template">
+#### 测试工具
+
+[Monkey](http://ihongqiqu.com/2015/12/24/Android-Monkey-Test/)<br/>
+[Monkeyrunner](http://ihongqiqu.com/2015/12/25/Android-monkeyrunner/)<br/>
+[Instrumentation](http://ihongqiqu.com/2016/01/07/android-instrumentation/)<br/>
+[Junit](https://developer.android.com/training/testing/start/index.html)<br/>
+</script></section><section data-markdown><script type="text/template">
+#### Junit & Instrumentation
+
+![](../assets/images/Android-Intro/test-types_2x.jpg)
+</script></section><section data-markdown><script type="text/template">
+#### 测试框架
+
+[![](http://ihongqiqu.com/imgs/post/android_test_compare_table.png)](http://ihongqiqu.com/2016/01/08/Android-Test-Framework-comparison/)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Android 安全隐患
+</script></section><section data-markdown><script type="text/template">
+#### 安全问题分类
+
+1. 本地数据存储安全
+2. 客户端配置安全
+3. 组件安全
+4. 数据传输安全
+5. 上线内控安全
+6. 业务安全
+7. 安全增强
+</script></section><section data-markdown><script type="text/template">
+#### 安全问题思维导图
+
+  ![](../assets/images/Android-Intro/AndroidSecurity.jpg)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## 趋势
+</script></section><section data-markdown><script type="text/template">
+#### 热点
+
+ 热补丁<br/> VR/AR <br/> WebApp <br/> 微信小程序
+</script></section></section><section  data-markdown><script type="text/template">
+## Thanks
+</script></section></div>
+		</div>
+
+		<script src="../templates/revealjs/lib/js/head.min.js"></script>
+		<script src="../templates/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'default', // default/none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../templates/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../templates/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../templates/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../templates/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>		
+	</body>
+</html>

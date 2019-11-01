@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>小程序介绍&amp;原生和H5交互</title>
+
+		<meta name="description" content="小程序介绍&amp;原生和H5交互">
+		<meta name="author" content="jingle1267">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../templates/revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../templates/revealjs/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../templates/revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../templates/revealjs/css/print/pdf.css' : '../templates/revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides"><section ><section data-markdown><script type="text/template"># 小程序介绍&原生和H5交互
+</script></section><section data-markdown><script type="text/template">
+### 概要
+
+1. 微信小程序介绍
+2. 原生和H5交互
+3. Q&A
+</script></section><section data-markdown><script type="text/template">
+### 微信小程序介绍
+
+1. 小程序的限制
+2. 小程序与H5交互
+3. Kepler
+4. 开发相关小程序
+</script></section><section data-markdown><script type="text/template">
+#### 1.1 小程序的限制
+
+1. 服务器域名
+2. 业务域名
+3. 次数限制
+4. 数量限制
+5. 推送限制
+6. 其他限制
+</script></section><section data-markdown><script type="text/template">
+##### 1.1.1 服务器域名
+
+​    request域名、socket域名、upload域名、download域名
+</script></section><section data-markdown><script type="text/template">
+##### 1.1.2 业务域名
+
+1. web-view(个人和海外类型小程序不支持使用) 
+2. 业务域名校验（iframe也需要添加）
+</script></section><section data-markdown><script type="text/template">
+##### 1.1.3 次数限制
+
+| 功能       | 功能介绍             | 次数    |
+| ---------- | -------------------- | ------- |
+| 小程序头像 | 小程序的logo         | 5次/月  |
+| 介绍       | 小程序的介绍信息     | 5次/月  |
+| 服务类目   | 小程序的分类(类目)   | 3次/月  |
+| 服务器域名 | 小程序访问的接口域名 | 5次/月  |
+| 业务域名   | H5页面的域名         | 50次/年 |
+</script></section><section data-markdown><script type="text/template">
+##### 1.1.4 数量限制
+
+| 限制           | 介绍                                        | 数量     |
+| -------------- | ------------------------------------------- | -------- |
+| 服务器域名     | 主要包括：request、socket、upload、download | 20个 * 4 |
+| 小程序业务域名 | 小程序可以配置的H5页面的域名                | 20个     |
+| 单业务域名     | 每个域名最多可以添加小程序校验文件的数量    | 20个     |
+</script></section><section data-markdown><script type="text/template">
+##### 1.1.5 推送限制
+
+| 推送方式 | 所需参数 | 参数说明                                        |
+| -------- | -------- | ----------------------------------------------- |
+| 提交表单 | formid   | 7天内1次提交表单可下发1条，多次提交下发条数独立 |
+| 支付     | payid    | 7天内1次支付可下发3条，多次支付下发条数独立     |
+</script></section><section data-markdown><script type="text/template">
+##### 1.1.6 其他限制
+
+1. 正式版和体验版，接口和业务H5连接必须是HTTPS
+2. 小程序相互跳转，必须绑定同一个公众号
+3. APP打开小程序的场景可以返回APP，其他都不可以
+4. 微信联合登录，必须要点击button且设置open-type
+</script></section><section data-markdown><script type="text/template">
+#### 1.2 小程序与H5交互
+</script></section><section data-markdown><script type="text/template">
+##### 1.2.1 小程序发消息给H5
+
+只能在链接中添加参数
+</script></section><section data-markdown><script type="text/template">
+##### 1.2.2 H5发消息给小程序
+
+wx.miniProgram.postMessage
+
+[https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html?search-key=web-view](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html?search-key=web-view)
+</script></section><section data-markdown><script type="text/template">
+#### 1.3 Kepler
+
+1. 接入开普勒
+2. 三个关键的参数
+</script></section><section data-markdown><script type="text/template">
+##### 1.3.1 接入开普勒
+
+1. [获取代码](https://cf.jd.com/pages/viewpage.action?pageId=107874531)，研发kepler沈鹏(shenpeng5)
+2. [申请子商户号](https://cf.jd.com/pages/viewpage.action?pageId=107874531)，产品kepler许维龙(xuweilong1)
+3. 微信联合登录，产品登录团队周锦红(zhoujinhong1)
+4. 拼购，研发拼购刘文(liuwen12)
+</script></section><section data-markdown><script type="text/template">
+##### 1.3.2 三个关键的参数
+
+```js
+// 1. 通天塔标识
+wxAppName=kepler
+// 2. 拼购订单标识
+PTAG=xxxxx.x.x
+// 3. 拼购特需参数
+cookie={"appkey":"appkey","source":"3_4","customerinfo":""}
+
+// PS：通天塔的链接是mini，例如
+// https://pro.m.jd.com/mini/active/3FJ3gMNjt7BytQA8nYySW5Zsirnd/index.html
+```
+</script></section><section data-markdown><script type="text/template">
+#### 1.4 开发相关小程序
+</script></section><section data-markdown><script type="text/template">
+##### 1.4.1 小程序助手：
+
+![小程序助手](/sliders/assets/images/weixin/wxmini_dev.jpg)
+</script></section><section data-markdown><script type="text/template">
+##### 1.4.2 小程序实例：
+
+![小程序示例](/sliders/assets/images/weixin/wxmini_try.jpg)
+</script></section><section data-markdown><script type="text/template">
+##### 1.4.3 小程序数据助手：
+
+![小程序数据助手](/sliders/assets/images/weixin/wxmini_data.jpg)
+</script></section><section data-markdown><script type="text/template">
+### 原生和H5交互
+
+1. 应用内部交互
+2. 应用外部交互
+</script></section><section data-markdown><script type="text/template">
+#### 2.1 应用内部交互
+</script></section><section data-markdown><script type="text/template">
+##### 2.1.1 原生调用H5
+
+1. 链接添加参数
+2. 直接调用H5定义的JS方法
+</script></section><section data-markdown><script type="text/template">
+##### 2.1.2 H5调用原生
+
+1. 直接调用原生注册的方法(存在安全隐患)
+2. 通过[prompt](http://www.w3school.com.cn/jsref/met_win_prompt.asp)重新定义协议
+3. sheme方式
+</script></section><section data-markdown><script type="text/template">
+#### 2.2 应用外部交互
+</script></section><section data-markdown><script type="text/template">
+##### 2.2.1 scheme方式
+
+```html
+<a href="[scheme]://[host]/[path]?[query]"> 唤起应用 </a>
+```
+
+[H5唤起原生应用](http://ihongqiqu.com/2015/12/03/html-call-native-app/)
+</script></section><section data-markdown><script type="text/template">
+##### 2.2.2 App Links
+
+![App Links Verifier](http://ihongqiqu.com/imgs/post/app_links_verifier.png)
+
+[Android App Links](http://ihongqiqu.com/2015/12/18/App-Links/)
+</script></section><section data-markdown><script type="text/template">
+### Q&A
+
+
+
+</script></section></section></div>
+		</div>
+
+		<script src="../templates/revealjs/lib/js/head.min.js"></script>
+		<script src="../templates/revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'default', // default/none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../templates/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../templates/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../templates/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../templates/revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../templates/revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>		
+	</body>
+</html>
