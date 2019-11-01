@@ -106,6 +106,10 @@ fs.readdir('./src', function (err, files) {
                 home_items[i].style = style_arr[i % style_arr.length]
             }
 
+            for (var i = 0; i < home_items.length; i++) {
+                console.log(home_items[i].name + " - " + home_items[i].style)
+            }
+
             fs.readFile("./templates/index.tpl", "utf8", function (err, data) {
                 if (err) {
                     return console.log(err);
