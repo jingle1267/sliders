@@ -38,6 +38,7 @@ function build_slider(md_files) {
     var style = "aa";
     md_files.forEach(function (file) {
         if (file.indexOf('.md') > 1) {
+
             var file_name = file.slice(0, file.length - 3);
             fs.readFile('./src/' + file, 'utf8', function (err, data) {
                 if (err) {
@@ -45,8 +46,6 @@ function build_slider(md_files) {
                 }
                 var content_with_split = split_content(data);
                 var slides = md.slidify(content_with_split, opts);
-                // console.log('slides')
-                // console.log(slides)
                 var title = data.split("\n")[0].replace("#", '').trim();
                 var view = {
                     title: title,
@@ -64,7 +63,17 @@ function build_slider(md_files) {
                     });
                     // 设置索引数据
                     // home_items.push({"path": target_path, "name": title, "style": style});
-                    home_items.push({"path": target_path, "name": title});
+                    // home_items.push({"path": target_path, "name": title});
+                    fs.stat('./src/' + file, function (err, stat) {
+                        if (stat.isFile()) {
+                            home_items.push({
+                                "path": target_path,
+                                "name": title,
+                                'createtime': Date.parse(stat.birthtime)
+                            });
+                        }
+                    })
+
                 });
             });
         }
@@ -81,7 +90,6 @@ var eventify = function (arr, callback) {
 };
 
 fs.readdir('./src', function (err, files) {
-    // console.log(files)
     if (err) {
         return console.log(err);
     }
@@ -90,17 +98,16 @@ fs.readdir('./src', function (err, files) {
         // mac下面会自动生成隐藏的.DS_Store文件
         if (updatedArr.length === files.length) {
 
-            // 对输出的列表进行排序
+            // 对输出的列表进行排序：按照文件创建日期排序
             home_items = home_items.sort(function (a, b) {
-                // console.log(a.name + " - " + b.name)
-                if (a.path < b.path) {
+                if (a.createtime < b.createtime) {
                     return -1;
-                } else if (a.path > b.path) {
+                } else if (a.createtime > b.createtime) {
                     return 1;
                 } else {
                     return 0;
                 }
-            });
+            })
 
             // 设置文章列表列表的样式
             var style_arr = ['aa', 'bb', 'cc'];
