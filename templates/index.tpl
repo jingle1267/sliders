@@ -24,8 +24,8 @@
       .navlist {
         text-align:center;
         margin: 0 auto;
-        width:80%;
-        padding-top: 3%;
+        width: 90%;
+        padding-top: 1%;
       }
       #nav ul {
         padding: 0px 0px;
@@ -34,7 +34,7 @@
         list-style:none;
         text-align:center;
         width: 100%;
-        margin-top:10px;
+        margin-top: 10px;
         padding:8px 12px;
       } 
       #nav li a {
@@ -46,15 +46,15 @@
         font-size:19px;
       } 
       .aa {
-        border-top:4px solid #01579b; 
+        border-top:6px solid #01579b;
         background:#039be5;
       } 
       .bb {
-        border-top:4px solid #006064; 
+        border-top:6px solid #006064;
         background:#00acc1;
       } 
       .cc {
-        border-top:4px solid #004d40; 
+        border-top:6px solid #004d40;
         background:#00897b;
       } 
        span {
