@@ -47,6 +47,7 @@
             width: 100%;
             color: #e0f7fa;
             font-size: 18px;
+            text-shadow: 1px 1px 1px #eeeeee59;
         }
 
         #nav li a:hover {
@@ -81,7 +82,7 @@
 <nav id="nav" class="navlist">
     <ul>
         {{#sliders}}
-        <li class="{{style}}"><a href="./{{{path}}}">{{name}}</a></li>
+        <li class="aa" style="{{style}}"><a href="./{{{path}}}">{{name}}</a></li>
         {{/sliders}}
     </ul>
 </nav>
