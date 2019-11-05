@@ -1,6 +1,6 @@
 {
   "name": "sliders",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "''",
   "watch": {
@@ -19,7 +19,7 @@
     "start": "concurrently \" npm run watch\" \"npm run preview\"",
     "start2": "concurrently \" npm run build\" \"npm run preview\""
   },
-  "author": "Ma Lucheng",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
