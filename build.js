@@ -118,8 +118,6 @@ fs.readdir('./src', function (err, files) {
 
             // 设置文章列表列表的样式
             var style_arr = [
-                'border-top: 6px solid #e51c23;background: #f69988;',
-                'border-top: 6px solid #e91e63;background: #f48fb1;',
                 'border-top: 6px solid #455a64;background: #90a4ae;',
                 'border-top: 6px solid #333333;background: #9e9e9e;',
                 'border-top: 6px solid #8d6e63;background: #bcaaa4;',
@@ -132,7 +130,9 @@ fs.readdir('./src', function (err, files) {
                 'border-top: 6px solid #673ab1;background: #9775cd;',
                 'border-top: 6px solid #006064;background: #00acc1;',
                 'border-top: 6px solid #01579b;background: #039be5;',
-                'border-top: 6px solid #004d40;background: #00897b;'
+                'border-top: 6px solid #004d40;background: #00897b;',
+                'border-top: 6px solid #e51c23;background: #f69988;',
+                'border-top: 6px solid #e91e63;background: #f48fb1;'
             ];
             console.log("home_items.length:" + home_items.length);
             for (var i = 0; i < home_items.length; i++) {
