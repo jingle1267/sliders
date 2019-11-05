@@ -109,8 +109,31 @@ fs.readdir('./src', function (err, files) {
                 }
             })
 
+            // just for test
+            // home_items.push({name:'aaa', 'path':'abc'})
+            // home_items.push({name:'bbb', 'path':'abc'})
+            // home_items.push({name:'ccc', 'path':'abc'})
+            // home_items.push({name:'ddd', 'path':'abc'})
+            // home_items.push({name:'eee', 'path':'abc'})
+
             // 设置文章列表列表的样式
-            var style_arr = ['aa', 'bb', 'cc'];
+            var style_arr = [
+                'border-top: 6px solid #e51c23;background: #f69988;',
+                'border-top: 6px solid #e91e63;background: #f48fb1;',
+                'border-top: 6px solid #455a64;background: #90a4ae;',
+                'border-top: 6px solid #333333;background: #9e9e9e;',
+                'border-top: 6px solid #8d6e63;background: #bcaaa4;',
+                'border-top: 6px solid #ff7043;background: #ffab91;',
+                'border-top: 6px solid #ff9800;background: #ffb74d;',
+                'border-top: 6px solid #f9a825;background: #fdd835;',
+                'border-top: 6px solid #c0ca33;background: #d4e157;',
+                'border-top: 6px solid #0a7e07;background: #72d572;',
+                'border-top: 6px solid #689f38;background: #aed581;',
+                'border-top: 6px solid #673ab1;background: #9775cd;',
+                'border-top: 6px solid #006064;background: #00acc1;',
+                'border-top: 6px solid #01579b;background: #039be5;',
+                'border-top: 6px solid #004d40;background: #00897b;'
+            ];
             console.log("home_items.length:" + home_items.length);
             for (var i = 0; i < home_items.length; i++) {
                 // console.log(home_items[i].name)
