@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
     <title> 爱红旗渠的分享 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css"/>
+    <link rel="stylesheet" href="/css/marx.min.css"/>
+    <link href="css/totop.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
     <style type="text/css">
         /* 去除页面默认的边框设置, 并将页面撑满 */
         body, html {
@@ -71,6 +74,10 @@
             background: #00897b;
         }
 
+        .qrcode {
+            margin-top: 20px;
+        }
+
         span {
             display: none;
         }
@@ -86,6 +93,39 @@
         {{/sliders}}
     </ul>
 </nav>
+
+<div style="height: 1px"></div>
+
+
+<div class="suspension">
+    <a class="cart" title="手机扫码查看">
+        <div class="pic">
+            <div class="pic-content" id="qrcode"></div>
+        </div>
+    </a>
+    <a href="javascript:void(0)" class="back-top" style="display: block;" title="返回顶部"></a>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".back-top").hide();
+        $(".back-top").live("click", function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        })
+        $(window).bind('scroll resize', function () {
+            if ($(window).scrollTop() <= 400) {
+                $(".back-top").hide();
+            } else {
+                $(".back-top").show();
+            }
+        })
+    })
+
+    jQuery('#qrcode').qrcode({width: 139, height: 139, text: window.location.href});
+</script>
 
 
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
