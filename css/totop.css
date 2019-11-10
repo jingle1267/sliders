@@ -78,10 +78,10 @@ a:hover {
 /* 必要布局样式css */
 .suspension {
     width: 46px;
-    height: 210px;
+    height: 100px;
     position: fixed;
     right: 30px;
-    bottom: 60px;
+    bottom: 30px;
     z-index: 999;
 }
 
