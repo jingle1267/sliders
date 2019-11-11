@@ -17,7 +17,7 @@
 <body>
 
 <div style="position: relative;">
-    <div id="large-header" class="large-header" style="height: 667px; position: absolute; width:100%; height:100%;">
+    <div id="large-header" class="large-header" style="height: 667px; position: fixed; width:100%; height:100%;">
         <canvas id="demo-canvas" width="375" height="667"></canvas>
     </div>
 
