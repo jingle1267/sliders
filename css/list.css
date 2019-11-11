@@ -36,9 +36,8 @@ body, html {
     text-decoration: none;
     line-height: 52px;
     width: 100%;
-    color: #e0f7fa;
+    color: #FFFFFF;
     font-size: 18px;
-    text-shadow: 1px 1px 1px #eeeeee59;
 }
 
 #nav li a:hover {

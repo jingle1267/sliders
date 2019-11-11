@@ -25,7 +25,7 @@
         <nav id="nav" class="navlist">
             <ul>
                 {{#sliders}}
-                <li class="aa" style="{{style}}"><a href="./{{{path}}}">{{name}}</a></li>
+                    <li style="{{style}}"><a href="./{{{path}}}">{{name}}</a></li>
                 {{/sliders}}
             </ul>
         </nav>
