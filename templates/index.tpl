@@ -98,7 +98,7 @@
 
 
 <div class="suspension">
-    <a class="cart" title="手机扫码查看">
+    <a class="cart" title="手机扫码查看" id="cart">
         <div class="pic">
             <div class="pic-content" id="qrcode"></div>
         </div>
@@ -125,6 +125,26 @@
     })
 
     jQuery('#qrcode').qrcode({width: 139, height: 139, text: window.location.href});
+
+    function isPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    if (!isPC()) {
+        jQuery('#cart').hide()
+    }
+
 </script>
 
 
