@@ -116,6 +116,18 @@ fs.readdir('./src', function (err, files) {
             // home_items.push({name:'ddd', 'path':'abc'})
             // home_items.push({name:'eee', 'path':'abc'})
 
+            // home_items.push({name:'aaa', 'path':'abc'})
+            // home_items.push({name:'bbb', 'path':'abc'})
+            // home_items.push({name:'ccc', 'path':'abc'})
+            // home_items.push({name:'ddd', 'path':'abc'})
+            // home_items.push({name:'eee', 'path':'abc'})
+
+            // home_items.push({name:'aaa', 'path':'abc'})
+            // home_items.push({name:'bbb', 'path':'abc'})
+            // home_items.push({name:'ccc', 'path':'abc'})
+            // home_items.push({name:'ddd', 'path':'abc'})
+            // home_items.push({name:'eee', 'path':'abc'})
+
             // 设置文章列表列表的样式
             var style_arr = [
                 'border-top: 6px solid #455a64;background: #90a4ae;',
@@ -134,7 +146,7 @@ fs.readdir('./src', function (err, files) {
                 'border-top: 6px solid #e51c23;background: #f69988;',
                 'border-top: 6px solid #e91e63;background: #f48fb1;'
             ];
-            console.log("home_items.length:" + home_items.length);
+            // console.log("home_items.length:" + home_items.length);
             for (var i = 0; i < home_items.length; i++) {
                 // console.log(home_items[i].name)
                 home_items[i].style = style_arr[i % style_arr.length]
