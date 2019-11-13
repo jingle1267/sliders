@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
     <title> 振国的分享 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/list.css">
     <link rel="stylesheet" href="/css/marx.min.css"/>
     <link href="css/totop.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/magic_normalize.css">
     <link rel="stylesheet" type="text/css" href="css/magic_component.css">
+    <link rel="stylesheet" type="text/css" href="css/list.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <canvas id="demo-canvas" width="375" height="667"></canvas>
     </div>
 
-    <div style="position: relative">
+    <div style="position: relative; padding-top: 58px; padding-bottom: 14px;">
         <nav id="nav" class="navlist">
             <ul>
                 {{#sliders}}
@@ -38,7 +38,13 @@
             </a>
             <a href="javascript:void(0)" class="back-top" style="display: block;" title="返回顶部"></a>
         </div>
+
     </div>
+
+    <div class="titlebar">
+        <h1>总结分享列表</h1>
+    </div>
+
 </div>
 
 
