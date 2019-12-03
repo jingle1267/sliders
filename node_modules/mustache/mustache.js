@@ -12,7 +12,7 @@
     define(['exports'], factory); // AMD
   } else {
     global.Mustache = {};
-    factory(global.Mustache); // script, wsh, asp
+    factory(Mustache); // script, wsh, asp
   }
 }(this, function mustacheFactory (mustache) {
 
@@ -63,13 +63,11 @@
     '>': '&gt;',
     '"': '&quot;',
     "'": '&#39;',
-    '/': '&#x2F;',
-    '`': '&#x60;',
-    '=': '&#x3D;'
+    '/': '&#x2F;'
   };
 
   function escapeHtml (string) {
-    return String(string).replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
+    return String(string).replace(/[&<>"'\/]/g, function fromEntityMap (s) {
       return entityMap[s];
     });
   }
@@ -269,19 +267,19 @@
       token = tokens[i];
 
       switch (token[0]) {
-        case '#':
-        case '^':
-          collector.push(token);
-          sections.push(token);
-          collector = token[4] = [];
-          break;
-        case '/':
-          section = sections.pop();
-          section[5] = token[2];
-          collector = sections.length > 0 ? sections[sections.length - 1][4] : nestedTokens;
-          break;
-        default:
-          collector.push(token);
+      case '#':
+      case '^':
+        collector.push(token);
+        sections.push(token);
+        collector = token[4] = [];
+        break;
+      case '/':
+        section = sections.pop();
+        section[5] = token[2];
+        collector = sections.length > 0 ? sections[sections.length - 1][4] : nestedTokens;
+        break;
+      default:
+        collector.push(token);
       }
     }
 
@@ -331,16 +329,16 @@
     var index = this.tail.search(re), match;
 
     switch (index) {
-      case -1:
-        match = this.tail;
-        this.tail = '';
-        break;
-      case 0:
-        match = '';
-        break;
-      default:
-        match = this.tail.substring(0, index);
-        this.tail = this.tail.substring(index);
+    case -1:
+      match = this.tail;
+      this.tail = '';
+      break;
+    case 0:
+      match = '';
+      break;
+    default:
+      match = this.tail.substring(0, index);
+      this.tail = this.tail.substring(index);
     }
 
     this.pos += match.length;
@@ -567,7 +565,7 @@
   };
 
   mustache.name = 'mustache.js';
-  mustache.version = '2.2.1';
+  mustache.version = '2.1.3';
   mustache.tags = [ '{{', '}}' ];
 
   // All high-level mustache.* functions use this writer.
