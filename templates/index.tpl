@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
     <title> 振国的分享 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/marx.min.css"/>
+    <link rel="stylesheet" href="css/marx.min.css"/>
     <link href="css/totop.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
