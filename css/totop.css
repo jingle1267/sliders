@@ -158,27 +158,27 @@ a:hover {
 }
 
 .service-phone {
-    background-image: url(../images/suspend_icon_01.png);
+    /*background-image: url(../images/suspend_icon_01.png);*/
 }
 
 .service-phone:hover {
-    background-image: url(../images/suspend_icon_01_blue.png)
+    /*background-image: url(../images/suspend_icon_01_blue.png)*/
 }
 
 .service-qq {
-    background-image: url(../images/suspend_icon_03.png);
+    /*background-image: url(../images/suspend_icon_03.png);*/
 }
 
 .service-qq:hover {
-    background-image: url(../images/suspend_icon_03_blue.png);
+    /*background-image: url(../images/suspend_icon_03_blue.png);*/
 }
 
 .service-proposal {
-    background-image: url(../images/suspend_icon_02.png);
+    /*background-image: url(../images/suspend_icon_02.png);*/
 }
 
 .service-proposal:hover {
-    background-image: url(../images/suspend_icon_02_blue.png)
+    /*background-image: url(../images/suspend_icon_02_blue.png)*/
 }
 
 .info-name {
