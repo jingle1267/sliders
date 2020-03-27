@@ -1,0 +1,2 @@
+git remote add coding git@e.coding.net:keeeweee/sliders.git
+git push -u coding master
