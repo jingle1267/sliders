@@ -90,6 +90,8 @@ FMP：包含页面所有元素及数据。
 
 ### 4.4 预渲染效果
 
+####  
+
 ![](https://raw.githubusercontent.com/jingle1267/image-host/master/2020/04/29-11-39-55-fe_fcp_performance.png)
 
 ### 4.5 不足
